@@ -1,0 +1,100 @@
+$darkBlue: #302846;
+$buttonGreen: #40c14d;
+$white: #ffffff;
+$darkGray: #8d8d8d;
+$ligthBlue: #483c76;
+$backgroundGray: #eeeeee;
+
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $backgroundGray;
+  font-family: "Inter", sans-serif;
+
+  .wrapper {
+    width: 100%;
+
+    .header {
+      width: 100%;
+      height: 80px;
+      background-color: $darkBlue;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      position: fixed;
+
+      .header__createNote {
+        width: 40%;
+        height: 50px;
+        background: $buttonGreen;
+        border: none;
+        outline: none;
+        border-radius: 20px;
+        color: $white;
+        font-weight: bold;
+        font-size: 16px;
+      }
+
+      .header__toggleCurrency {
+        height: 80px;
+        background: none;
+        outline: none;
+        border: none;
+        color: $white;
+      }
+
+      .header__currency {
+        width: 100%;
+        padding: 30px;
+        background: $darkBlue;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 80px;
+        left: 0;
+        transform: scale(0);
+        transition: none;
+
+        .header__currencyInfo {
+          width: 100%;
+          height: 80px;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          border-radius: 10px;
+          background-color: $ligthBlue;
+
+          .header__EUR {
+            width: 30%;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-right: 2px solid $darkBlue;
+          }
+
+          .header__USA {
+            @extend .header__EUR;
+          }
+
+          .header__CHF {
+            border: none;
+            @extend .header__EUR;
+          }
+        }
+      }
+
+      .scale {
+        transform: scale(1);
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+  }
+}

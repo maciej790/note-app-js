@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #eeeeee;
+  font-family: "Inter", sans-serif;
+}
+
+body .wrapper {
+  width: 100%;
+}
+
+body .wrapper .header {
+  width: 100%;
+  height: 80px;
+  background-color: #302846;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+}
+
+body .wrapper .header .header__createNote {
+  width: 40%;
+  height: 50px;
+  background: #40c14d;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+body .wrapper .header .header__toggleCurrency {
+  height: 80px;
+  background: none;
+  outline: none;
+  border: none;
+  color: #ffffff;
+}
+
+body .wrapper .header .header__currency {
+  width: 100%;
+  padding: 30px;
+  background: #302846;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 80px;
+  left: 0;
+  transform: scale(0);
+  transition: none;
+}
+
+body .wrapper .header .header__currency .header__currencyInfo {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #483c76;
+}
+
+body .wrapper .header .header__currency .header__currencyInfo .header__EUR, body .wrapper .header .header__currency .header__currencyInfo .header__USA, body .wrapper .header .header__currency .header__currencyInfo .header__CHF {
+  width: 30%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 2px solid #302846;
+}
+
+body .wrapper .header .header__currency .header__currencyInfo .header__CHF {
+  border: none;
+}
+
+body .wrapper .header .scale {
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+}

@@ -4,6 +4,12 @@ $white: #ffffff;
 $darkGray: #8d8d8d;
 $ligthBlue: #483c76;
 $backgroundGray: #eeeeee;
+$ligthYellow: #f8fc3b;
+$darkYellow: #e2e525;
+$veryDarkYellow: #cdcf24;
+$green: #4df572;
+$blue: #35a4c7;
+$red: #f44e4e;
 
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 
@@ -19,6 +25,9 @@ body {
 
   .wrapper {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     .header {
       width: 100%;
@@ -94,6 +103,103 @@ body {
       .scale {
         transform: scale(1);
         transition: transform 0.3s ease-in-out;
+      }
+    }
+
+    .modal {
+      width: 90%;
+      background: $darkYellow;
+      position: fixed;
+      top: 120px;
+      border: 3px solid $darkBlue;
+
+      .modal__close {
+        width: 100%;
+        height: 50px;
+        text-align: right;
+
+        i {
+          width: 50px;
+          background: $veryDarkYellow;
+          text-align: center;
+        }
+      }
+
+      .modal__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        height: 400px;
+
+        ::placeholder {
+          text-align: center;
+          color: $darkGray;
+          font-size: 14px;
+        }
+
+        .modal__title {
+          width: 80%;
+          height: 40px;
+          border: none;
+          outline: none;
+          text-align: center;
+          color: $darkBlue;
+          font-size: 18px;
+        }
+
+        .modal__note {
+          width: 80%;
+          border: none;
+          outline: none;
+          text-align: center;
+          color: $darkBlue;
+          font-size: 18px;
+        }
+
+        .modal__submit {
+          width: 30%;
+          height: 40px;
+          background: $buttonGreen;
+          border: none;
+          outline: none;
+          border-radius: 20px;
+          color: $white;
+          font-weight: bold;
+          font-size: 16px;
+        }
+
+        .modal__colors {
+          text-align: center;
+
+          @mixin radioInput($bg) {
+            background: $bg;
+            appearance: none;
+            margin: 0;
+            font: inherit;
+            color: currentColor;
+            width: 30px;
+            height: 30px;
+            border: 2px solid $darkBlue;
+            border-radius: 50%;
+
+            &:checked {
+              opacity: 0.3;
+            }
+          }
+
+          .modal__green {
+            @include radioInput($green);
+          }
+
+          .modal__blue {
+            @include radioInput($blue);
+          }
+
+          .modal__red {
+            @include radioInput($red);
+          }
+        }
       }
     }
   }

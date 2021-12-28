@@ -26,6 +26,39 @@
           <i class="fas fa-caret-down fa-3x"></i>
         </button>
       </header>
+      <section class="modal">
+        <div class="modal__close">
+          <i class="fas fa-times fa-3x"></i>
+        </div>
+        <form class="modal__form" method="" action="">
+          <label for="title">Note title:</label>
+          <input
+            type="text"
+            name="title"
+            class="modal__title"
+            placeholder="type title for note"
+          />
+          <label for="note">Note text:</label>
+          <textarea
+            rows="6"
+            name="note"
+            class="modal__note"
+            placeholder="type note"
+          ></textarea>
+          <div class="modal__colors">
+            <label for="color">Choose note color:</label><br /><br />
+            <input
+              type="radio"
+              name="color"
+              class="modal__green"
+              value="green"
+            />
+            <input type="radio" name="color" class="modal__blue" value="blue" />
+            <input type="radio" name="color" class="modal__red" value="red" />
+          </div>
+          <input type="submit" value="Create" class="modal__submit" />
+        </form>
+      </section>
     </div>
     <script src="index.js"></script>
   </body>

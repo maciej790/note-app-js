@@ -1,1 +1,8 @@
-console.log('hello app!');
+console.log("hello app!");
+
+const btn = document.querySelector(".header__toggleCurrency");
+const element = document.querySelector(".header__currency");
+
+btn.addEventListener("click", () => {
+  element.classList.toggle("scale");
+});

@@ -54,11 +54,18 @@ body .wrapper .header .header__currency {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   position: fixed;
   top: 80px;
   left: 0;
   transform: scale(0);
   transition: none;
+}
+
+body .wrapper .header .header__currency .header__title {
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #ffffff;
 }
 
 body .wrapper .header .header__currency .header__currencyInfo {
@@ -71,16 +78,19 @@ body .wrapper .header .header__currency .header__currencyInfo {
   background-color: #483c76;
 }
 
-body .wrapper .header .header__currency .header__currencyInfo .header__EUR, body .wrapper .header .header__currency .header__currencyInfo .header__USA, body .wrapper .header .header__currency .header__currencyInfo .header__CHF {
+body .wrapper .header .header__currency .header__currencyInfo .header__result {
   width: 30%;
   height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  color: #ffffff;
+  font-weight: bold;
   border-right: 2px solid #302846;
 }
 
-body .wrapper .header .header__currency .header__currencyInfo .header__CHF {
+body .wrapper .header .header__currency .header__currencyInfo .header__result:last-child {
   border: none;
 }
 
@@ -95,6 +105,8 @@ body .wrapper .modal {
   position: fixed;
   top: 120px;
   border: 3px solid #302846;
+  transform: translateY(-200%);
+  transition: none;
 }
 
 body .wrapper .modal .modal__close {
@@ -204,4 +216,9 @@ body .wrapper .modal .modal__form .modal__colors .modal__red {
 
 body .wrapper .modal .modal__form .modal__colors .modal__red:checked {
   opacity: 0.3;
+}
+
+body .wrapper .slide {
+  transform: translateY(0);
+  transition: transform 0.3s ease-in-out;
 }

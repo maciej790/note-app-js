@@ -65,11 +65,18 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-direction: column;
         position: fixed;
         top: 80px;
         left: 0;
         transform: scale(0);
         transition: none;
+
+        .header__title {
+          margin-bottom: 20px;
+          font-size: 18px;
+          color: $white;
+        }
 
         .header__currencyInfo {
           width: 100%;
@@ -80,22 +87,20 @@ body {
           border-radius: 10px;
           background-color: $ligthBlue;
 
-          .header__EUR {
+          .header__result {
             width: 30%;
             height: 60px;
             display: flex;
             justify-content: center;
             align-items: center;
+            text-align: center;
+            color: $white;
+            font-weight: bold;
             border-right: 2px solid $darkBlue;
-          }
 
-          .header__USA {
-            @extend .header__EUR;
-          }
-
-          .header__CHF {
-            border: none;
-            @extend .header__EUR;
+            &:last-child {
+              border: none;
+            }
           }
         }
       }
@@ -112,6 +117,8 @@ body {
       position: fixed;
       top: 120px;
       border: 3px solid $darkBlue;
+      transform: translateY(-200%);
+      transition: none;
 
       .modal__close {
         width: 100%;
@@ -201,6 +208,11 @@ body {
           }
         }
       }
+    }
+
+    .slide {
+      transform: translateY(0);
+      transition: transform 0.3s ease-in-out;
     }
   }
 }

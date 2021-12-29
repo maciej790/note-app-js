@@ -6,17 +6,11 @@ const showCurrencyButton = document.querySelector(".header__toggleCurrency");
 const currencyElement = document.querySelector(".header__currency");
 const currencyResultsElement = document.querySelector(".header__currencyInfo");
 
-const SlideModalElement = () => {
-  modalElement.classList.add("slide");
-};
+const SlideModalElement = () => modalElement.classList.add("slide");
 
-const CloseModalElement = () => {
-  modalElement.classList.remove("slide");
-};
+const CloseModalElement = () => modalElement.classList.remove("slide");
 
-const ScaleCurrencyElement = () => {
-  currencyElement.classList.toggle("scale");
-};
+const ScaleCurrencyElement = () => currencyElement.classList.toggle("scale");
 
 const GetCurrencyRatings = async () => {
   const baseURL = "http://api.nbp.pl/api/exchangerates/rates/A/";
